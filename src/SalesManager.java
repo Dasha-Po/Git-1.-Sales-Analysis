@@ -18,9 +18,9 @@ public class SalesManager {
     }
 
     //функция, возвращающая минимальное значение в заданном массиве
-    public int min() {
-        int min = sales[0];
-        for (int sale : sales) {
+    public long min() {
+        long min = sales[0];
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -30,13 +30,13 @@ public class SalesManager {
 
     // расчёт обрезанного среднего - это среднее количество продаж среди всех продаж,
     // за исключением самой максимальной и самой минимальной
-    public int averageNum() {
-        int result = 0;
-        for (int sale : sales) {
+    public long averageNum() {
+        long result = 0;
+        for (long sale : sales) {
             result += sale;
         }
-        int max = max();
-        int min = min();
+        long max = max();
+        long min = min();
         return (result - max - min) / (sales.length - 2);
     }
 }
