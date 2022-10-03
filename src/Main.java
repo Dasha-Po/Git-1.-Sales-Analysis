@@ -4,5 +4,7 @@ public class Main {
         SalesManager salesManager = new SalesManager(sumSales);
         System.out.println("Максимальное количество продаж:");
         System.out.println(salesManager.max());
+        System.out.println("обрезанное среднее:");
+        System.out.println(salesManager.averageNum());
     }
 }
